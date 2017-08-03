@@ -7,7 +7,7 @@ import io.reactivex.Single
 
 class GetPokemonListUseCase(val pokemonRepository: PokemonRepository) {
 
-    fun getPokemonList(): Single<List<SimplePokemon>> {
-        return Single.defer { pokemonRepository.getPokemons() }
+    fun execute(): Single<List<SimplePokemon>> {
+        return Single.defer( { pokemonRepository.getPokemons() })
     }
 }

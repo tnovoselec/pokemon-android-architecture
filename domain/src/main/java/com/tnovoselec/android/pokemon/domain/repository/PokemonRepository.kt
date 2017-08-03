@@ -10,4 +10,6 @@ interface PokemonRepository {
     fun getPokemons(): Single<List<SimplePokemon>>
 
     fun getPokemonDetails(resourceUri: String): Single<Pokemon>
+
+    fun persistPokemons(simplePokemons: List<SimplePokemon>)
 }
